@@ -1,0 +1,258 @@
+html, body, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables */
+:root {
+    --text-color: #FF6565;
+    --link-hover-color: #FF6565;
+    --button-hover-opacity: 0.9;
+    --max-content-width: 1000px;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header (Navbar) */
+header {
+    padding: 20px 10px 20px 10px;
+}
+
+nav {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 25px; 
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+a:hover, a:active {
+    color: var(--link-hover-color);
+}
+
+/* Hero Section */
+body {
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-image: url('images/headphones_hero_1.jpg'); /* Add your image path */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-family: "Your Desired Font", sans-serif; /* Replace "Your Desired Font" with the actual font name */
+}
+
+.hero {
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 2em;
+    padding-top: 15%;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: var(--link-hover-color);
+    color: white;
+    padding: 15px 40px; /* Adjust the padding for a larger button */
+    border: none;
+    border-radius: 20px; /* Adjust the border-radius for a rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s; /* Include background-color in transition */
+}
+
+button:hover, button:active {
+    background-color: var(--link-hover-color); /* Change background color on hover */
+    opacity: var(--button-hover-opacity);
+}
+
+/* New Paragraph Styles */
+.long-paragraph {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 800px; /* Set the maximum width for the paragraph */
+    margin: 30px auto; /* Center the paragraph within its container */
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .logo {
+        text-align: center; /* Center the logo */
+    }
+
+    .logo img {
+        max-height: 30px; /* Adjust the max height of your logo */
+    }
+
+    .menu-icon:hover + .menu-items,
+.menu-items:hover {
+    display: flex; 
+}
+
+    
+    .menu-items {
+        display: none; /* Initially hide the mobile navigation */
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .menu-items ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-items li {
+        margin: 10px;
+    }
+    
+    .menu-icon {
+        display: block; /* Display the menu icon on smaller screens */
+        cursor: pointer;
+        font-size: 16px; /* Adjust the font size as needed */
+        color: rgb(19, 13, 13);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text content */
+}
+
+.what-we-do {
+    max-width: 600px; /* Adjust max-width as needed for your content */
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+}
+
+.one-icon {
+    text-align: center;
+    width: 200px; /* Set a fixed width for each icon container, adjust as needed */
+    margin: 10px; /* Add some margin between icons */
+}
+
+.one-icon img {
+    max-width: 100%; /* Make sure the image doesn't exceed the container width */
+}
+
+/* Optional: Add responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .icons {
+        flex-direction: column; /* Stack icons vertically on smaller screens */
+        align-items: center; /* Center icons horizontally on smaller screens */
+    }
+}
+
+
+
+/* Section-2 Styles */
+.section-2 {
+    background-color: #F0F0F0; /* Set a background color for section-2 */
+    padding: 10px 30px; /* Add padding for spacing */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text content */
+}
+
+.what-we-do {
+    max-width: 1000px; /* Adjust max-width as needed for your content */
+    margin-bottom: 30px; /* Add margin at the bottom for spacing */
+}
+
+.what-we-do h1 {
+    color: #071629; /* Set a color for the heading */
+    font-size: 32px; /* Adjust font size for the heading */
+    margin-bottom: 50px; /* Add margin at the bottom for spacing */
+}
+
+.what-we-do p {
+    color: #071629; /* Set a color for the paragraph */
+    font-size: 16px; /* Adjust font size for the paragraph */
+    line-height: 1.6; /* Adjust line height for better readability */
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+    
+}
+
+.icons .one-icon h1 {
+    color: #071629;
+    font-size: 18px;
+}
+
+.icons .one-icon  p {
+    color: #071629;
+    font-size: 14px;
+}
+.one-icon {
+    text-align: center;
+    width: 200px; /* Set a fixed width for each icon container, adjust as needed */
+    margin: 60px;
+}
+
+.one-icon img {
+    max-width: 100%; 
+    margin-bottom: 10px; 
+}
+
+/* Optional: Add responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .icons {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
