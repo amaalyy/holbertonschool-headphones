@@ -6,7 +6,7 @@ html, body, h1, h2, h3, p, ul, li, button {
 
 /* Variables */
 :root {
-	--text-color: #FF6565;
+    --text-color: #FF6565;
     --link-hover-color: #FF6565;
     --button-hover-opacity: 0.9;
     --max-content-width: 1000px;
@@ -18,19 +18,19 @@ body {
 }
 /* Header (Navbar) */
 header {
-    padding: 20px 10px 20px 10px; /* Add some padding for spacing */
+    padding: 20px 10px 20px 10px; 
 }
 
 nav {
     max-width: var(--max-content-width);
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Separate logo and navigation items */
-    align-items: center; /* Center vertically */
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .logo img {
-    max-height: 25px; /* Adjust the max height of your logo */
+    max-height: 25px; 
 }
 
 ul {
@@ -56,14 +56,13 @@ a:hover, a:active {
 body {
     margin: 0;
     padding: 0;
-	background-size: cover;
-	background-repeat: repeat-x;
-    background-image: url('images/headphones_hero_1.jpg'); /* Add your image path */
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-image: url('images/headphones_hero_1.jpg');
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
-	font-family: "Your Desired Font", sans-serif; /* Replace "Your Desired Font" with the actual font name */
-
+    font-family: "Your Desired Font", sans-serif; 
 }
 
 .hero {
@@ -72,7 +71,7 @@ body {
 
 h1 {
     font-size: 2em;
-	padding-top: 15%;
+    padding-top: 15%;
     margin-bottom: 20px;
 }
 
@@ -80,18 +79,19 @@ p {
     font-size: 1.2em;
     margin-bottom: 30px;
 }
+
 button {
     background-color: var(--link-hover-color);
     color: white;
-    padding: 15px 40px; /* Adjust the padding for a larger button */
+    padding: 15px 40px;
     border: none;
-    border-radius: 20px; /* Adjust the border-radius for a rounded button */
+    border-radius: 20px; 
     cursor: pointer;
-    transition: background-color 0.3s, opacity 0.3s; /* Include background-color in transition */
+    transition: background-color 0.3s, opacity 0.3s; 
 }
 
 button:hover, button:active {
-    background-color: var(--link-hover-color); /* Change background color on hover */
+    background-color: var(--link-hover-color); 
     opacity: var(--button-hover-opacity);
 }
 
@@ -99,30 +99,31 @@ button:hover, button:active {
 .long-paragraph {
     font-size: 1rem;
     line-height: 1.5;
-    max-width: 800px; /* Set the maximum width for the paragraph */
-    margin: 30px auto; /* Center the paragraph within its container */
+    max-width: 800px; 
+    margin: 30px auto; 
 }
 
-
-/* Mobile Version */
-/* ... (previous styles) */
-
-/* Mobile Version */
 @media screen and (max-width: 480px) {
     body {
         font-size: 16px;
     }
 
     .logo {
-        text-align: center; /* Center the logo */
+        text-align: center; 
     }
 
     .logo img {
-        max-height: 30px; /* Adjust the max height of your logo */
+        max-height: 30px; 
     }
 
+    .menu-icon:hover + .menu-items,
+.menu-items:hover {
+    display: flex; 
+}
+
+    
     .menu-items {
-        display: none; /* Initially hide the mobile navigation */
+        display: none;
         flex-direction: column;
         align-items: center;
         background-color: #333;
@@ -144,22 +145,23 @@ button:hover, button:active {
     .menu-items li {
         margin: 10px;
     }
-
+    
     .menu-icon {
-        display: block; /* Display the menu icon on smaller screens */
+        display: block;
         cursor: pointer;
-        font-size: 24px;
-        color: white;
+        font-size: 16px; 
+        color: rgb(19, 13, 13);
         position: absolute;
         top: 20px;
         right: 20px;
     }
+}
 
-    .menu-icon.active {
-        color: var(--link-hover-color); /* Change icon color when active */
-    }
 
-    .checkbox-input:checked + .menu-items {
-        display: flex; /* Show mobile nav when checkbox is checked */
+
+
+@media screen and (min-width: 480px) {
+    .menu-icon {
+        display: none;
     }
 }
